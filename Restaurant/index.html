@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurant Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS Link -->
+        <link rel='stylesheet' href='./style.css'>
+        <!-- FONTS -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Nunito&family=Comfortaa&display=swap" rel="stylesheet">
+        <!-- SWIPER.JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.4/swiper-bundle.min.css">
+        <!-- Remix Icons -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <!------------- PRELOADER ------------->
+        <div class="preloader">
+            <span class="loader"></span>
+        </div>
+        <!------------- SCROLL TO TOP BUTTON ------------->
+        <div id="scrollTop" onclick="scrollToTop()">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+
+        <!------------- Header ------------->
+        <div class="home" id="home">
+            <nav>
+                <div class="nav-logo">
+                    <img src="assets/chef-hat.png">
+                    <h2 id="company" onclick="scrollToTop()">Restaurant</h2>
+                </div>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li>
+                            <a href='#about' class='pages'>About</a>
+                        </li>
+                        <li>
+                            <a href='#western' class='pages'>Western</a>
+                        </li>
+                        <li>
+                            <a href='#chinese' class='pages'>Chinese</a>
+                        </li>
+                        <li>
+                            <a href='#order' class='pages'>Order</a>
+                        </li>
+                    </ul>
+                    <img src="assets/pancakes.png" id="banner">
+                    <div class="nav-close" id="nav-close" onclick="hideNav()">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                <i class="ri-moon-line" id="moon" onclick="changeToDark()"></i>
+                <i class="ri-sun-line" id="sun" onclick="changeToLight()"></i>
+                <div class="nav-toggle" id="nav-toggle" onclick="showNav()">
+                    <i class="ri-apps-line"></i>
+                </div>
+            </nav>
+            <div class="header" id="header">
+                <div class="content" data-inViewport="slideTop">
+                    <h2 id="title">Restaurant <span>Website</span></h2>
+                    <p>Our restaurant provides many great dishes <br>to make you enjoy your meals and <br> bond with your family and friends!</p>
+                    <button onclick="scrollToAbout()">Explore now!<i class="ri-arrow-right-line"></i></button>
+                </div>
+                <img src="assets/steak.png" data-inViewport="slideLeft">
+            </div>
+        </div>
+
+        <!------------- ABOUT ------------->
+        <div class="about" id="about">
+            <h2>About</h2>
+            <div class="content first">
+                <img src="assets/chef-hat.png" data-inViewport="slideLeft">
+                <p data-inViewport="slideTop"><span>Who Are We?</span> <br> We are professional chefs that shares love with <br> you through food. We put in great effort to <br> make great food.</p>
+            </div>
+            <div class="content">
+                <p data-inViewport="slideTop"><span>Best Quality</span> <br> We provide the best quality food and <br> services for you to feel refreshed and<br>energised after a busy day.</p>
+                <img src="assets/best-quality.png" data-inViewport="slideLeft">
+            </div>
+        </div>
+        
+        <!------------- WESTERN ------------->
+        <div class="western" id="western">
+            <h2>Western Food</h2>
+            <p>Here are some of the Western food we provide. <br>Check them out!</p>
+            <div class="swiper" data-inViewport="slideTop">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>Tender Steak <br>$25</h2>
+                        <img src="assets/steak.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>Hamburger<br>$10</h2>
+                        <img src="assets/hamburger.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>Grilled Fish<br>$20</h2>
+                        <img src="assets/fish.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>Pizza<br>$15</h2>
+                        <img src="assets/pizza.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>French Fries<br>$5</h2>
+                        <img src="assets/fries.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>Strawberry Cake<br>$8</h2>
+                        <img src="assets/cake.png">
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!------------- CHINESE ------------->
+        <div class="chinese" id="chinese">
+            <h2>Chinese Food</h2>
+            <p>Here are some of the Chinese food we provide. <br>Check them out!</p>
+            <div class="swiper" data-inViewport="slideTop">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>阳春面 <br>Noodles</h2>
+                        <img src="assets/chinese-noodles.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>蒸包子 <br>Steamed Bun</h2>
+                        <img src="assets/steamed-bun.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>炒饭<br>Fried Rice</h2>
+                        <img src="assets/fried-rice.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>饺子<br>Dumplings</h2>
+                        <img src="assets/dumplings.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>汤面/拉面<br>Soup Noodles</h2>
+                        <img src="assets/la-mian.png">
+                    </div>
+                    <div class="swiper-slide">
+                        <i class="ri-heart-line" id='heart1'></i>
+                        <h2>北京烤鸭<br>Beijing Roasted Duck</h2>
+                        <img src="assets/roasted-duck.png">
+                    </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+        <!------------- ORDER ------------->
+        <div class="order" id="order">
+            <h2>Order</h2>
+            <p>Order your food now!</p>
+            <button class='orderbtn'>ORDER NOW</button>
+            <img src="assets/juice.png">
+        </div>
+
+        <!------------- FOOTER ------------->
+        <div class="footer">
+            <div class="links">
+                <ul>
+                    <h2>Overview</h2>
+                    <li><a href='#'>Prices</a></li>
+                    <li><a href='#'>Promotion</a></li>
+                    <li><a href='#'>Privacy & Policy</a></li>
+                </ul>
+                <ul>
+                    <h2>Others</h2>
+                    <li><a href='#'>Donate</a></li>
+                    <li><a href='#'>Support</a></li>
+                    <li><a href='#'>Our Team</a></li>
+                </ul>
+            </div>
+            <p>© Copyright 2022. Codingstar Tutorials. <br>
+            </p>
+        </div>
+
+    <!-- SCRIPT -->
+    <script src="./main.js"></script>
+    </body>
+</html>
